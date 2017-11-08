@@ -2,8 +2,7 @@
 % Please edit documentation in R/fbh_auc_compare.R
 \name{fbh_test}
 \alias{fbh_test}
-\title{apply z-test for difference between auc_1 and auc_2 using FBH method.
-For more information, see Fogarty, Baker and Hudson, "Case Studies in the use of ROC Curve Analysis for Sensor-Based Estimates in Human Computer Interaction" 2008.}
+\title{Apply z-test for difference between auc_1 and auc_2 using FBH method.}
 \usage{
 fbh_test(auc_1, auc_2, n_p, n_n)
 }
@@ -20,6 +19,11 @@ fbh_test(auc_1, auc_2, n_p, n_n)
 numeric, single aggregated z-score of comparison A'_1 - A'_2.
 }
 \description{
-apply z-test for difference between auc_1 and auc_2 using FBH method.
-For more information, see Fogarty, Baker and Hudson, "Case Studies in the use of ROC Curve Analysis for Sensor-Based Estimates in Human Computer Interaction" 2008.
+Apply z-test for difference between auc_1 and auc_2 using FBH method.
+}
+\seealso{
+Fogarty, Baker and Hudson, "Case Studies in the use of ROC Curve Analysis for Sensor-Based Estimates in Human Computer Interaction" 2008.
+
+Other fbh method: \code{\link{fbh_auc_compare}},
+  \code{\link{se_auc}}
 }

@@ -2,8 +2,9 @@ library(dplyr)
 library(tidyr)
 
 
-#' Compute standard error of AUC score, using its equivalence to the Wilcoxon statistic (See Fogarty, Baker and Hudson, "Case Studies in the use of ROC Curve Analysis for Sensor-Based Estimates in Human Computer Interaction" 2008.)
-#' 
+#' Compute standard error of AUC score, using its equivalence to the Wilcoxon statistic.
+#' @family fbh method
+#' @seealso "The meaning and use of the area under a receiver operating characteristic (ROC) curve", Hanley and McNeil, Radiology, 1982. 
 #' @param auc value of A' statistic (or AUC, or Area Under the Receiver operating characteristic curve) (numeric).
 #' @param n_p number of positive cases (integer).
 #' @param n_n number of negative cases (integer).
@@ -14,8 +15,9 @@ se_auc <- function(auc, n_p, n_n){
     return(SE_auc)
 }
 
-#' apply z-test for difference between auc_1 and auc_2 using FBH method.
-#' For more information, see Fogarty, Baker and Hudson, "Case Studies in the use of ROC Curve Analysis for Sensor-Based Estimates in Human Computer Interaction" 2008.
+#' Apply z-test for difference between auc_1 and auc_2 using FBH method.
+#' @family fbh method
+#' @seealso Fogarty, Baker and Hudson, "Case Studies in the use of ROC Curve Analysis for Sensor-Based Estimates in Human Computer Interaction" 2008.
 #' 
 #' @param auc_1 value of A' statistic (or AUC, or Area Under the Receiver operating characteristic curve) for the first group (numeric).
 #' @param auc_2 value of A' statistic (or AUC, or Area Under the Receiver operating characteristic curve) for the second group (numeric).
@@ -30,7 +32,8 @@ fbh_test <- function(auc_1, auc_2, n_p, n_n){
 }
 
 #' Compute aggregate z-score using Stouffer's method.
-#' See  Stouffer, S.A.; Suchman, E.A.; DeVinney, L.C.; Star, S.A.; Williams, R.M. Jr. (1949). The American Soldier, Vol.1: Adjustment during Army Life.)
+#' 
+#' @seealso Stouffer, S.A.; Suchman, E.A.; DeVinney, L.C.; Star, S.A.; Williams, R.M. Jr. (1949). The American Soldier, Vol.1: Adjustment during Army Life.)
 #' @param z_vec vector of z-scores (numeric).
 #' @param ignore.na should NA values be ignored? defaults to TRUE.
 #' @return numeric, Z-score using Stouffer's method aggregated over \code{z_vec}.
@@ -42,7 +45,8 @@ stouffer_z <- function(z_vec, ignore.na = TRUE){
 }
 
 #' Apply the FBH method to compare \code{outcome_col} by \code{compare_col}, averaging over \code{time_col} (due to non-independence) and then over \code{over_col} by using Stouffer's Method.
-#' For more information, see Fogarty, Baker and Hudson, "Case Studies in the use of ROC Curve Analysis for Sensor-Based Estimates in Human Computer Interaction" 2008.
+#' @family fbh method
+#' @seealso Fogarty, Baker and Hudson, "Case Studies in the use of ROC Curve Analysis for Sensor-Based Estimates in Human Computer Interaction" 2008.
 #'
 #' @param df DataFrame containing \code{time_col}, \code{outcome_col}, \code{compare_col}, and \code{over_col}.
 #' @param compare_values names of models to compare (character vector of length 2). These should match exactly the names as they appear in compare_col.

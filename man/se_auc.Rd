@@ -2,7 +2,7 @@
 % Please edit documentation in R/fbh_auc_compare.R
 \name{se_auc}
 \alias{se_auc}
-\title{Compute standard error of AUC score, using its equivalence to the Wilcoxon statistic (See Fogarty, Baker and Hudson, "Case Studies in the use of ROC Curve Analysis for Sensor-Based Estimates in Human Computer Interaction" 2008.)}
+\title{Compute standard error of AUC score, using its equivalence to the Wilcoxon statistic.}
 \usage{
 se_auc(auc, n_p, n_n)
 }
@@ -14,5 +14,11 @@ se_auc(auc, n_p, n_n)
 \item{n_n}{number of negative cases (integer).}
 }
 \description{
-Compute standard error of AUC score, using its equivalence to the Wilcoxon statistic (See Fogarty, Baker and Hudson, "Case Studies in the use of ROC Curve Analysis for Sensor-Based Estimates in Human Computer Interaction" 2008.)
+Compute standard error of AUC score, using its equivalence to the Wilcoxon statistic.
+}
+\seealso{
+"The meaning and use of the area under a receiver operating characteristic (ROC) curve", Hanley and McNeil, Radiology, 1982.
+
+Other fbh method: \code{\link{fbh_auc_compare}},
+  \code{\link{fbh_test}}
 }

@@ -2,8 +2,7 @@
 % Please edit documentation in R/fbh_auc_compare.R
 \name{fbh_auc_compare}
 \alias{fbh_auc_compare}
-\title{Apply the FBH method to compare \code{outcome_col} by \code{compare_col}, averaging over \code{time_col} (due to non-independence) and then over \code{over_col} by using Stouffer's Method.
-For more information, see Fogarty, Baker and Hudson, "Case Studies in the use of ROC Curve Analysis for Sensor-Based Estimates in Human Computer Interaction" 2008.}
+\title{Apply the FBH method to compare \code{outcome_col} by \code{compare_col}, averaging over \code{time_col} (due to non-independence) and then over \code{over_col} by using Stouffer's Method.}
 \usage{
 fbh_auc_compare(df, compare_values, filter_value, time_col = "week",
   outcome_col = "auc", compare_col = "model", over_col = "course",
@@ -38,5 +37,10 @@ numeric, overall z-score of comparison using the FBH method.
 }
 \description{
 Apply the FBH method to compare \code{outcome_col} by \code{compare_col}, averaging over \code{time_col} (due to non-independence) and then over \code{over_col} by using Stouffer's Method.
-For more information, see Fogarty, Baker and Hudson, "Case Studies in the use of ROC Curve Analysis for Sensor-Based Estimates in Human Computer Interaction" 2008.
+}
+\seealso{
+Fogarty, Baker and Hudson, "Case Studies in the use of ROC Curve Analysis for Sensor-Based Estimates in Human Computer Interaction" 2008.
+
+Other fbh method: \code{\link{fbh_test}},
+  \code{\link{se_auc}}
 }

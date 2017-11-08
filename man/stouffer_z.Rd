@@ -2,8 +2,7 @@
 % Please edit documentation in R/fbh_auc_compare.R
 \name{stouffer_z}
 \alias{stouffer_z}
-\title{Compute aggregate z-score using Stouffer's method.
-See  Stouffer, S.A.; Suchman, E.A.; DeVinney, L.C.; Star, S.A.; Williams, R.M. Jr. (1949). The American Soldier, Vol.1: Adjustment during Army Life.)}
+\title{Compute aggregate z-score using Stouffer's method.}
 \usage{
 stouffer_z(z_vec, ignore.na = TRUE)
 }
@@ -17,5 +16,7 @@ numeric, Z-score using Stouffer's method aggregated over \code{z_vec}.
 }
 \description{
 Compute aggregate z-score using Stouffer's method.
-See  Stouffer, S.A.; Suchman, E.A.; DeVinney, L.C.; Star, S.A.; Williams, R.M. Jr. (1949). The American Soldier, Vol.1: Adjustment during Army Life.)
+}
+\seealso{
+Stouffer, S.A.; Suchman, E.A.; DeVinney, L.C.; Star, S.A.; Williams, R.M. Jr. (1949). The American Soldier, Vol.1: Adjustment during Army Life.)
 }
