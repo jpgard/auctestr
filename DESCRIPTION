@@ -2,7 +2,16 @@ Package: auctestr
 Title: Statistical Testing for AUC data.
 Version: 0.0.0.9000
 Authors@R: person("Josh", "Gardner", email = "jpgard@umich.edu", role = c("aut", "cre"))
-Description: This package performs statistical testing to compare predictive models based on multiple observations of the A' statistic (also known as Area Under the Receiver Operating Characteristic Curve, or AUC). Specifically, it implements a testing method based on the equivalence between the A' statistic and the Wilcoxon statistic. For more information, see "The meaning and use of the area under a receiver operating characteristic (ROC) curve", Hanley and McNeil, Radiology, 1982. 
+Description: This package performs statistical testing to compare predictive 
+	models based on multiple observations of the A' statistic (also known as 
+	Area Under the Receiver Operating Characteristic Curve, or AUC). 
+	Specifically, it implements a testing method based on the equivalence 
+	between the A' statistic and the Wilcoxon statistic. 
+	For more information, see "The meaning and use of the area under a receiver 
+	operating characteristic (ROC) curve", Hanley and McNeil, Radiology, 1982. 
+Imports: 
+	dplyr,
+	tidyr
 Depends: R (>= 3.3.1)
 License: MIT
 Encoding: UTF-8
