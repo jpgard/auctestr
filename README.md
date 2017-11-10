@@ -3,7 +3,7 @@
 auctestr
 ========
 
-The AUC statistic (Area Under the Receiver Operating Characteristic Curve, or A') is commonly used to evaluate predictive models. However, the AUC statistical also has unique, and uniquely useful, statistical properties that can make statistical significance testing especially simple. This means that instead of just choosing the best model, or making educated guesses about difference in model performance, machine learning researchers can make informed, statistically rigorous comparisons about the performance of two models across several datasets and even with multiple observations within each dataset (as often occurs, for example, when using k-fold cross-validation or when models are trained using data from multiple time points).
+The AUC statistic (Area Under the Receiver Operating Characteristic Curve, or A') is commonly used to evaluate predictive models. However, the AUC statistical also has unique, and uniquely useful, statistical properties that can make statistical significance testing especially simple. This means that instead of just choosing the best model based on average observed performance, or making educated guesses about difference in model performance, machine learning researchers can make informed, statistically rigorous comparisons about the performance of two models across several datasets and even with multiple observations within each dataset (as often occurs, for example, when using k-fold cross-validation or when models are trained using data from multiple time points).
 
 Installation
 ------------
