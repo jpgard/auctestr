@@ -81,3 +81,5 @@ If you're interested in reading more about the methods used in this package, che
 -   Hanley and McNeil, "The meaning and use of the area under a receiver operating characteristic (ROC) curve", Radiology, 1982.
 -   Fogarty, Baker and Hudson, "Case Studies in the use of ROC Curve Analysis for Sensor-Based Estimates in Human Computer Interaction" 2008.
 -   Stouffer, S.A.; Suchman, E.A.; DeVinney, L.C.; Star, S.A.; Williams, R.M. Jr. (1949). The American Soldier, Vol.1: Adjustment during Army Life.)
+
+[![Travis-CI Build Status](https://travis-ci.org/jpgard/auctestr.svg?branch=master)](https://travis-ci.org/jpgard/auctestr)
