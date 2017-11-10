@@ -12,7 +12,8 @@ require(tidyr, quietly = TRUE)
 #' @export
 #' @examples
 #' se_auc(0.75, 20, 200)
-#' ## standard error decreases when data become more balanced over positive/negative outcome class, holding sample size fixed
+#' ## standard error decreases when data become more balanced over
+#' ## positive/negative outcome class, holding sample size fixed
 #' se_auc(0.75, 110, 110)
 #' ## standard error increases when sample size shrinks
 #' se_auc(0.75, 20, 20)
@@ -85,11 +86,32 @@ stouffer_z <- function(z_vec, ignore.na = TRUE){
 #' ## load sample experiment data
 #' data(sample_experiment_data)
 #' ## compare VariantA of ModelA and ModelB
-#' auc_compare(sample_experiment_data, compare_values = c("ModelA", "ModelB"), filter_value = c("VariantA"), time_col = "time", outcome_col = "auc", compare_col = "model_id", over_col = "dataset", filter_col = "model_variant")
+#' auc_compare(sample_experiment_data,
+#'     compare_values = c("ModelA", "ModelB"),
+#'     filter_value = c("VariantA"),
+#'     time_col = "time",
+#'     outcome_col = "auc",
+#'     compare_col = "model_id",
+#'     over_col = "dataset",
+#'     filter_col = "model_variant")
 #' ## compare VariantC of ModelA and ModelB
-#' auc_compare(sample_experiment_data, compare_values = c("ModelA", "ModelB"), filter_value = c("VariantC"), time_col = "time", outcome_col = "auc", compare_col = "model_id", over_col = "dataset", filter_col = "model_variant")
+#' auc_compare(sample_experiment_data,
+#'     compare_values = c("ModelA", "ModelB"),
+#'     filter_value = c("VariantC"),
+#'     time_col = "time",
+#'     outcome_col = "auc",
+#'     compare_col = "model_id",
+#'     over_col = "dataset",
+#'     filter_col = "model_variant")
 #' ## compare ModelC, VariantA and VariantB
-#' auc_compare(sample_experiment_data, compare_values = c("VariantA", "VariantB"), filter_value = c("ModelC"), time_col = "time", outcome_col = "auc", compare_col = "model_variant", over_col = "dataset", filter_col = "model_id")
+#' auc_compare(sample_experiment_data,
+#'     compare_values = c("VariantA", "VariantB"),
+#'     filter_value = c("ModelC"),
+#'     time_col = "time",
+#'     outcome_col = "auc",
+#'     compare_col = "model_variant",
+#'     over_col = "dataset",
+#'     filter_col = "model_id")
 auc_compare <- function(df, compare_values, filter_value, time_col = "time", outcome_col = "auc", compare_col = "model_id", over_col = "dataset", n_col = "n", n_p_col = "n_p", n_n_col = "n_n", filter_col = "model_variant"){
     ## TODO: check that time_col, outcome_col, compare_col, and over_col exist and are in names of dataframe.
     ## TODO: check that len(compare_values) == 2
