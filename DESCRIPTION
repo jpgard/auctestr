@@ -9,7 +9,7 @@ Description: This package performs statistical testing to compare predictive
 	between the A' statistic and the Wilcoxon statistic. 
 	For more information, see "The meaning and use of the area under a receiver 
 	operating characteristic (ROC) curve", Hanley and McNeil, Radiology, 1982. 
-Imports: 
+Imports:
 	dplyr,
 	tidyr
 Depends: R (>= 3.3.1)
@@ -17,3 +17,6 @@ License: MIT
 Encoding: UTF-8
 LazyData: true
 RoxygenNote: 6.0.1
+Suggests: knitr,
+    rmarkdown
+VignetteBuilder: knitr
