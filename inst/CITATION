@@ -1,0 +1,13 @@
+citHeader("To cite auctestr in publications use:")
+
+citEntry(entry = "Unpiblished",
+  title        = "Model Evaluation with {auctestr}",
+  author       = personList(as.person("Josh Gardner")),
+  year         = "2017",
+  url          = "https://github.com/jpgard/auctestr",
+
+  textVersion  =
+  paste("Josh Gardner (2017).",
+        "Model Evaluation with auctestr.",
+        "URL https://github.com/jpgard/auctestr.")
+)
