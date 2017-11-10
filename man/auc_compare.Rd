@@ -42,11 +42,32 @@ Apply the FBH method to compare \code{outcome_col} by \code{compare_col}, averag
 ## load sample experiment data
 data(sample_experiment_data)
 ## compare VariantA of ModelA and ModelB
-auc_compare(sample_experiment_data, compare_values = c("ModelA", "ModelB"), filter_value = c("VariantA"), time_col = "time", outcome_col = "auc", compare_col = "model_id", over_col = "dataset", filter_col = "model_variant")
+auc_compare(sample_experiment_data,
+    compare_values = c("ModelA", "ModelB"),
+    filter_value = c("VariantA"),
+    time_col = "time",
+    outcome_col = "auc",
+    compare_col = "model_id",
+    over_col = "dataset",
+    filter_col = "model_variant")
 ## compare VariantC of ModelA and ModelB
-auc_compare(sample_experiment_data, compare_values = c("ModelA", "ModelB"), filter_value = c("VariantC"), time_col = "time", outcome_col = "auc", compare_col = "model_id", over_col = "dataset", filter_col = "model_variant")
+auc_compare(sample_experiment_data,
+    compare_values = c("ModelA", "ModelB"),
+    filter_value = c("VariantC"),
+    time_col = "time",
+    outcome_col = "auc",
+    compare_col = "model_id",
+    over_col = "dataset",
+    filter_col = "model_variant")
 ## compare ModelC, VariantA and VariantB
-auc_compare(sample_experiment_data, compare_values = c("VariantA", "VariantB"), filter_value = c("ModelC"), time_col = "time", outcome_col = "auc", compare_col = "model_variant", over_col = "dataset", filter_col = "model_id")
+auc_compare(sample_experiment_data,
+    compare_values = c("VariantA", "VariantB"),
+    filter_value = c("ModelC"),
+    time_col = "time",
+    outcome_col = "auc",
+    compare_col = "model_variant",
+    over_col = "dataset",
+    filter_col = "model_id")
 }
 \references{
 Fogarty, Baker and Hudson, "Case Studies in the use of ROC Curve Analysis for Sensor-Based Estimates in Human Computer Interaction" 2008.
