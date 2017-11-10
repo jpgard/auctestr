@@ -5,14 +5,10 @@
 ## R CMD check results
 There were no ERRORs or WARNINGs.
 
-NOTE: 
-"
+1 NOTE: 
 Maintainer: ‘Josh Gardner <jpgard@umich.edu>’
-
 New submission
 
-Version contains large components (1.0.0.9000)
-"
 This is because this is a new submission.
 
 ## Downstream dependencies
