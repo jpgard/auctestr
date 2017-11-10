@@ -1,6 +1,6 @@
 Package: auctestr
 Title: Statistical Testing for AUC Data
-Version: 1.0.0.9000
+Version: 1.0.0
 Authors@R: person("Josh", "Gardner", email = "jpgard@umich.edu", role = c("aut", "cre"))
 Maintainer: Josh Gardner <jpgard@umich.edu>
 Description: Performs statistical testing to compare predictive 
