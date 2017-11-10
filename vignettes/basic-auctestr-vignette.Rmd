@@ -33,11 +33,11 @@ data("sample_experiment_data", package="auctestr")
 head(sample_experiment_data, 15)
 ```
 
-Conducting statistical comparisons of models, including over time, can be completed in a single call to `fbh_auc_compare()`:
+Conducting statistical comparisons of models, including over time, can be completed in a single call to `auc_compare()`:
 
 ```{r}
 # compare model A and model B, only evaluating VariantC of both models
-z_score = fbh_auc_compare(sample_experiment_data, compare_values = c("ModelA", "ModelB"), filter_value = c("VariantC"), time_col = "time", outcome_col = "auc", compare_col = "model_id", over_col = "dataset", filter_col = "model_variant")
+z_score = auc_compare(sample_experiment_data, compare_values = c("ModelA", "ModelB"), filter_value = c("VariantC"), time_col = "time", outcome_col = "auc", compare_col = "model_id", over_col = "dataset", filter_col = "model_variant")
 z_score
 # fetch p-value of this comparison
 pnorm(-abs(z_score))
@@ -46,7 +46,7 @@ pnorm(-abs(z_score))
 `auctestr` also allows for flexible adjustment of which pairwise comparisons are conducted, and which elements are held fixed (the fixed values are set using `filter_value` and `filter_col` parameters):
 
 ```{r}
-z_score = fbh_auc_compare(sample_experiment_data, compare_values = c("VariantA", "VariantB"), filter_value = c("ModelC"), time_col = "time", outcome_col = "auc", compare_col = "model_variant", over_col = "dataset", filter_col = "model_id")
+z_score = auc_compare(sample_experiment_data, compare_values = c("VariantA", "VariantB"), filter_value = c("ModelC"), time_col = "time", outcome_col = "auc", compare_col = "model_variant", over_col = "dataset", filter_col = "model_id")
 z_score
 pnorm(-abs(z_score))
 ```
