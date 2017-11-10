@@ -6,3 +6,5 @@
 #'
 #' @docType package
 #' @name auctestr
+NULL
+
