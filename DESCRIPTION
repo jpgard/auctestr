@@ -1,6 +1,6 @@
 Package: auctestr
 Title: Statistical Testing for AUC data
-Version: 0.0.0.9000
+Version: 1.0.0.9000
 Authors@R: person("Josh", "Gardner", email = "jpgard@umich.edu", role = c("aut", "cre"))
 Description: This package performs statistical testing to compare predictive 
 	models based on multiple observations of the A' statistic (also known as 
