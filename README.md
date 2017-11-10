@@ -68,9 +68,16 @@ Hopefully, `auctestr` makes comparing your models simple and useful. Future vers
 Generating AUC Data
 -------------------
 
-If you have predictive models but need a tool for calculating their AUC scores, check out the following packages: + `proc` [link](https://cran.r-project.org/web/packages/pROC/pROC.pdf) + `caret` [link](http://topepo.github.io/caret/index.html)
+If you have predictive models but need a tool for calculating their AUC scores, check out the following packages:
+
+-   `proc` [link](https://cran.r-project.org/web/packages/pROC/pROC.pdf)
+-   `caret` [link](http://topepo.github.io/caret/index.html)
 
 References and Further Reading
 ------------------------------
 
-If you're interested in reading more about the methods used in this package, check the following references, which served as the basis for this implementation: + Hanley and McNeil, "The meaning and use of the area under a receiver operating characteristic (ROC) curve", Radiology, 1982. + Fogarty, Baker and Hudson, "Case Studies in the use of ROC Curve Analysis for Sensor-Based Estimates in Human Computer Interaction" 2008. + Stouffer, S.A.; Suchman, E.A.; DeVinney, L.C.; Star, S.A.; Williams, R.M. Jr. (1949). The American Soldier, Vol.1: Adjustment during Army Life.)
+If you're interested in reading more about the methods used in this package, check the following references, which served as the basis for this implementation:
+
+-   Hanley and McNeil, "The meaning and use of the area under a receiver operating characteristic (ROC) curve", Radiology, 1982.
+-   Fogarty, Baker and Hudson, "Case Studies in the use of ROC Curve Analysis for Sensor-Based Estimates in Human Computer Interaction" 2008.
+-   Stouffer, S.A.; Suchman, E.A.; DeVinney, L.C.; Star, S.A.; Williams, R.M. Jr. (1949). The American Soldier, Vol.1: Adjustment during Army Life.)
