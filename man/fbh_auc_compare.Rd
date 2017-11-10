@@ -4,10 +4,10 @@
 \alias{fbh_auc_compare}
 \title{Apply the FBH method to compare \code{outcome_col} by \code{compare_col}, averaging over \code{time_col} (due to non-independence) and then over \code{over_col} by using Stouffer's Method.}
 \usage{
-fbh_auc_compare(df, compare_values, filter_value, time_col = "week",
-  outcome_col = "auc", compare_col = "model", over_col = "course",
+fbh_auc_compare(df, compare_values, filter_value, time_col = "time",
+  outcome_col = "auc", compare_col = "model_id", over_col = "dataset",
   n_col = "n", n_p_col = "n_p", n_n_col = "n_n",
-  filter_col = "feat_type")
+  filter_col = "model_variant")
 }
 \arguments{
 \item{df}{DataFrame containing \code{time_col}, \code{outcome_col}, \code{compare_col}, and \code{over_col}.}
@@ -16,7 +16,7 @@ fbh_auc_compare(df, compare_values, filter_value, time_col = "week",
 
 \item{filter_value}{(optional) keep only observations which contain \code{filter_value} for \code{filter_col}.}
 
-\item{time_col}{name of column in df representing time of observations (z-scores are averaged over time_col within each model/course due to non-independence). These can also be other dependent groupings, such as cross-validation folds.}
+\item{time_col}{name of column in df representing time of observations (z-scores are averaged over time_col within each model/dataset due to non-independence). These can also be other dependent groupings, such as cross-validation folds.}
 
 \item{outcome_col}{name of column in df representing outcome to compare; this should be Area Under the Receiver Operating Characteristic or A' statistic (this method applies specifically to AUC and not other metrics (i.e., sensitivity, precision, F1)..}
 
@@ -38,9 +38,20 @@ numeric, overall z-score of comparison using the FBH method.
 \description{
 Apply the FBH method to compare \code{outcome_col} by \code{compare_col}, averaging over \code{time_col} (due to non-independence) and then over \code{over_col} by using Stouffer's Method.
 }
-\seealso{
+\examples{
+## load sample experiment data
+data(sampledata)
+## compare VariantA of ModelA and ModelB
+fbh_auc_compare(sampledata, compare_values = c("ModelA", "ModelB"), filter_value = c("VariantA"), time_col = "time", outcome_col = "auc", compare_col = "model_id", over_col = "dataset", filter_col = "model_variant")
+## compare VariantC of ModelA and ModelB
+fbh_auc_compare(sampledata, compare_values = c("ModelA", "ModelB"), filter_value = c("VariantC"), time_col = "time", outcome_col = "auc", compare_col = "model_id", over_col = "dataset", filter_col = "model_variant")
+## compare ModelC, VariantA and VariantB
+fbh_auc_compare(sampledata, compare_values = c("VariantA", "VariantB"), filter_value = c("ModelC"), time_col = "time", outcome_col = "auc", compare_col = "model_variant", over_col = "dataset", filter_col = "model_id")
+}
+\references{
 Fogarty, Baker and Hudson, "Case Studies in the use of ROC Curve Analysis for Sensor-Based Estimates in Human Computer Interaction" 2008.
-
+}
+\seealso{
 Other fbh method: \code{\link{fbh_test}},
   \code{\link{se_auc}}
 }

@@ -17,6 +17,6 @@ numeric, Z-score using Stouffer's method aggregated over \code{z_vec}.
 \description{
 Compute aggregate z-score using Stouffer's method.
 }
-\seealso{
+\references{
 Stouffer, S.A.; Suchman, E.A.; DeVinney, L.C.; Star, S.A.; Williams, R.M. Jr. (1949). The American Soldier, Vol.1: Adjustment during Army Life.)
 }

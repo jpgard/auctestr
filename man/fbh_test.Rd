@@ -21,9 +21,17 @@ numeric, single aggregated z-score of comparison A'_1 - A'_2.
 \description{
 Apply z-test for difference between auc_1 and auc_2 using FBH method.
 }
-\seealso{
+\examples{
+## Two models with identical AUC return z-score of zero
+fbh_test(0.56, 0.56, 1000, 2500)
+## Compare two models; note that changing order changes sign of z-statistic
+fbh_test(0.56, 0.59, 1000, 2500)
+fbh_test(0.59, 0.56, 1000, 2500)
+}
+\references{
 Fogarty, Baker and Hudson, "Case Studies in the use of ROC Curve Analysis for Sensor-Based Estimates in Human Computer Interaction" 2008.
-
+}
+\seealso{
 Other fbh method: \code{\link{fbh_auc_compare}},
   \code{\link{se_auc}}
 }
