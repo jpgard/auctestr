@@ -5,6 +5,7 @@ require(tidyr, quietly = TRUE)
 #' Compute standard error of AUC score, using its equivalence to the Wilcoxon statistic.
 #' @family fbh method
 #' @references "The meaning and use of the area under a receiver operating characteristic (ROC) curve", Hanley and McNeil, Radiology, 1982.
+#' @references Fogarty, Baker and Hudson, "Case Studies in the use of ROC Curve Analysis for Sensor-Based Estimates in Human Computer Interaction" 2008.
 #' @param auc value of A' statistic (or AUC, or Area Under the Receiver operating characteristic curve) (numeric).
 #' @param n_p number of positive cases (integer).
 #' @param n_n number of negative cases (integer).
