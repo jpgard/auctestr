@@ -2,7 +2,7 @@ Package: auctestr
 Title: Statistical Testing for AUC Data
 Version: 1.0.0.9000
 Authors@R: person("Josh", "Gardner", email = "jpgard@umich.edu", role = c("aut", "cre"))
-Description: This package performs statistical testing to compare predictive 
+Description: Performs statistical testing to compare predictive 
 	models based on multiple observations of the A' statistic (also known as 
 	Area Under the Receiver Operating Characteristic Curve, or AUC). 
 	Specifically, it implements a testing method based on the equivalence 
