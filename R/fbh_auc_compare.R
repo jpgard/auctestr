@@ -1,5 +1,5 @@
-library(dplyr)
-library(tidyr)
+require(dplyr, quietly = TRUE)
+require(tidyr, quietly = TRUE)
 
 
 #' Compute standard error of AUC score, using its equivalence to the Wilcoxon statistic.
@@ -8,6 +8,7 @@ library(tidyr)
 #' @param auc value of A' statistic (or AUC, or Area Under the Receiver operating characteristic curve) (numeric).
 #' @param n_p number of positive cases (integer).
 #' @param n_n number of negative cases (integer).
+#' @export
 #' @examples
 #' se_auc(0.75, 20, 200)
 #' ## standard error decreases when data become more balanced over positive/negative outcome class, holding sample size fixed
@@ -30,6 +31,7 @@ se_auc <- function(auc, n_p, n_n){
 #' @param n_p number of positive observations (needed for calculation of standard error of Wilcoxon statistic) (numeric).
 #' @param n_n number of negative observations (needed for calculation of standard error of Wilcoxon statistic) (numeric).
 #' @return numeric, single aggregated z-score of comparison A'_1 - A'_2.
+#' @export
 #'
 #' @examples
 #' ## Two models with identical AUC return z-score of zero
@@ -50,6 +52,8 @@ fbh_test <- function(auc_1, auc_2, n_p, n_n){
 #' @param z_vec vector of z-scores (numeric).
 #' @param ignore.na should NA values be ignored? defaults to TRUE.
 #' @return numeric, Z-score using Stouffer's method aggregated over \code{z_vec}.
+#' @export
+#'
 stouffer_z <- function(z_vec, ignore.na = TRUE){
     S_z = sum(z_vec, na.rm=ignore.na)
     k = sum(!is.na(z_vec))
@@ -73,6 +77,8 @@ stouffer_z <- function(z_vec, ignore.na = TRUE){
 #' @param n_n_col name of column in df with n_n, number of negative observations.
 #' @param filter_col (optional) name of column in df to filter observations on; keep only observations which contain \code{filter_value} for \code{filter_col}.
 #' @return numeric, overall z-score of comparison using the FBH method.
+#' @export
+#' @importFrom dplyr %>%
 #'
 #' @examples
 #' ## load sample experiment data
@@ -89,7 +95,7 @@ fbh_auc_compare <- function(df, compare_values, filter_value, time_col = "time",
     #TODO: add a default for compare_values; if not provided just take first two items alphabetically.
     #TODO: make filter_col and filter_value optional.
     filter_str = paste0(compare_col, " %in% c('", compare_values[1], "', '", compare_values[2], "') & ", filter_col, " == '", filter_value, "'")
-    comp_df = dplyr::select(df, one_of(c(time_col, outcome_col, compare_col, over_col, n_col, n_p_col, n_n_col, filter_col))) %>% dplyr::filter_(filter_str)
+    comp_df = dplyr::select(df, dplyr::one_of(c(time_col, outcome_col, compare_col, over_col, n_col, n_p_col, n_n_col, filter_col))) %>% dplyr::filter_(filter_str)
     n_datasets = length(unique(comp_df[,over_col]))
     dataset_z_scores = rep(NA, n_datasets)
     for (dataset_ix in seq_along(unique(comp_df[,over_col]))){
