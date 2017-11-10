@@ -70,7 +70,7 @@ Generating AUC Data
 
 If you have predictive models but need a tool for calculating their AUC scores, check out the following packages:
 
--   `proc` [link](https://cran.r-project.org/web/packages/pROC/pROC.pdf)
+-   `pROC` [link](https://cran.r-project.org/web/packages/pROC/pROC.pdf)
 -   `caret` [link](http://topepo.github.io/caret/index.html)
 
 References and Further Reading
