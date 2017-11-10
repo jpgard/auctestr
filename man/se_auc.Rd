@@ -25,6 +25,8 @@ se_auc(0.75, 20, 20)
 }
 \references{
 "The meaning and use of the area under a receiver operating characteristic (ROC) curve", Hanley and McNeil, Radiology, 1982.
+
+Fogarty, Baker and Hudson, "Case Studies in the use of ROC Curve Analysis for Sensor-Based Estimates in Human Computer Interaction" 2008.
 }
 \seealso{
 Other fbh method: \code{\link{auc_compare}},
