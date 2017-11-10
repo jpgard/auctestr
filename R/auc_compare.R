@@ -113,10 +113,6 @@ stouffer_z <- function(z_vec, ignore.na = TRUE){
 #'     over_col = "dataset",
 #'     filter_col = "model_id")
 auc_compare <- function(df, compare_values, filter_value, time_col = "time", outcome_col = "auc", compare_col = "model_id", over_col = "dataset", n_col = "n", n_p_col = "n_p", n_n_col = "n_n", filter_col = "model_variant"){
-    ## TODO: check that time_col, outcome_col, compare_col, and over_col exist and are in names of dataframe.
-    ## TODO: check that len(compare_values) == 2
-    #TODO: add a default for compare_values; if not provided just take first two items alphabetically.
-    #TODO: make filter_col and filter_value optional.
     filter_str = paste0(compare_col, " %in% c('", compare_values[1], "', '", compare_values[2], "') & ", filter_col, " == '", filter_value, "'")
     comp_df = dplyr::select(df, dplyr::one_of(c(time_col, outcome_col, compare_col, over_col, n_col, n_p_col, n_n_col, filter_col))) %>% dplyr::filter_(filter_str)
     n_datasets = length(unique(comp_df[,over_col]))
