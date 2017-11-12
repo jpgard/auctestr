@@ -16,7 +16,7 @@
 #'   \item{n_p}{Number of positive observations (i.e., outcome == 1) in this dataset (required for standard error estimation of AUC statistic).}
 #'   \item{dataset}{indicator for different datasets.}
 #'   \item{time}{indicator for different time points used to build each dataset; these represent dependent observations of model performance.}
-#'   \item{model_id}{Indicator for the statistical algorithm used (this could be "Logistic Regression", "SVM", etc.).}
+#'   \item{model_id}{Indicator for the statistical algorithm used (this could be 'Logistic Regression', 'SVM', etc.).}
 #'   \item{model_variant}{Indicator for different variants of each model which are not equivalent and should be used individually (model should not be averaged over these, and instead should be held fixed when comparing to other model). Example of this could be various hyperparameter settings for a given model (i.e., cost for an SVM).}
 #' }
 "sample_experiment_data"
