@@ -7,13 +7,17 @@
 fbh_test(auc_1, auc_2, n_p, n_n)
 }
 \arguments{
-\item{auc_1}{value of A' statistic (or AUC, or Area Under the Receiver operating characteristic curve) for the first group (numeric).}
+\item{auc_1}{value of A' statistic (or AUC, or Area Under the Receiver operating
+characteristic curve) for the first group (numeric).}
 
-\item{auc_2}{value of A' statistic (or AUC, or Area Under the Receiver operating characteristic curve) for the second group (numeric).}
+\item{auc_2}{value of A' statistic (or AUC, or Area Under the Receiver operating
+characteristic curve) for the second group (numeric).}
 
-\item{n_p}{number of positive observations (needed for calculation of standard error of Wilcoxon statistic) (numeric).}
+\item{n_p}{number of positive observations (needed for calculation of standard
+error of Wilcoxon statistic) (numeric).}
 
-\item{n_n}{number of negative observations (needed for calculation of standard error of Wilcoxon statistic) (numeric).}
+\item{n_n}{number of negative observations (needed for calculation of standard
+error of Wilcoxon statistic) (numeric).}
 }
 \value{
 numeric, single aggregated z-score of comparison A'_1 - A'_2.
@@ -29,7 +33,9 @@ fbh_test(0.56, 0.59, 1000, 2500)
 fbh_test(0.59, 0.56, 1000, 2500)
 }
 \references{
-Fogarty, Baker and Hudson, "Case Studies in the use of ROC Curve Analysis for Sensor-Based Estimates in Human Computer Interaction" 2008.
+Fogarty, Baker and Hudson, Case Studies in the use of ROC Curve Analysis
+for Sensor-Based Estimates in Human Computer Interaction,
+Proceedings of Graphics Interface (2005) pp. 129-136.
 }
 \seealso{
 Other fbh method: \code{\link{auc_compare}},

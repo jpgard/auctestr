@@ -7,7 +7,8 @@
 se_auc(auc, n_p, n_n)
 }
 \arguments{
-\item{auc}{value of A' statistic (or AUC, or Area Under the Receiver operating characteristic curve) (numeric).}
+\item{auc}{value of A' statistic (or AUC, or Area Under the Receiver operating
+characteristic curve) (numeric).}
 
 \item{n_p}{number of positive cases (integer).}
 
@@ -25,9 +26,12 @@ se_auc(0.75, 110, 110)
 se_auc(0.75, 20, 20)
 }
 \references{
-"The meaning and use of the area under a receiver operating characteristic (ROC) curve", Hanley and McNeil, Radiology, 1982.
+Hanley and McNeil, The meaning and use of the area under a receiver
+operating characteristic (ROC) curve. Radiology (1982) 43 (1) pp. 29-36.
 
-Fogarty, Baker and Hudson, "Case Studies in the use of ROC Curve Analysis for Sensor-Based Estimates in Human Computer Interaction" 2008.
+Fogarty, Baker and Hudson, Case Studies in the use of ROC Curve Analysis
+for Sensor-Based Estimates in Human Computer Interaction,
+Proceedings of Graphics Interface (2005) pp. 129-136.
 }
 \seealso{
 Other fbh method: \code{\link{auc_compare}},
