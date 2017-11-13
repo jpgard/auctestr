@@ -12,14 +12,19 @@ The AUC statistic (Area Under the Receiver Operating Characteristic Curve, or A'
 Installation
 ------------
 
-You can install auctestr from github with:
+You can install auctestr from CRAN with:
+
+``` r
+
+install.packages("auctestr")
+```
+
+Or, install the latest version from github with:
 
 ``` r
 # install.packages("devtools")
 devtools::install_github("jpgard/auctestr")
 ```
-
-Soon, when auctestr is available on CRAN, you'll be able to install it with `library()`. This README will be updated when that happens!
 
 Example
 -------
